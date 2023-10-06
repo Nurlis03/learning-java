@@ -1,0 +1,23 @@
+Abstraction In OOP
+In simple terms, abstraction “displays” only the relevant 
+attributes of objects and “hides” the unnecessary details.
+
+Abstraction in OOP can be of two types.
+
+#1) Data Abstraction
+
+In data abstraction, we mostly create complex data types and hide their 
+implementation. We only expose the operations to manipulate these data types without 
+going into the details of their implementation.
+
+One advantage of this approach is that we can change the implementation anytime without 
+changing the behavior that is exposed to the user.
+
+#2) Control Abstraction
+
+Control abstraction collects all the control statements that are a part of 
+the application and exposes them as a unit. This feature is used when we have to 
+perform a working feature using this control unit.
+
+Control abstraction forms the main unit of structured programming and using control 
+abstraction we can define simple functions in complex frameworks.

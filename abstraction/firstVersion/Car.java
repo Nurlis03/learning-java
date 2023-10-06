@@ -1,4 +1,4 @@
-package abstraction;
+package abstraction.firstVersion;
 
 public class Car extends Vehicle {
 
