@@ -15,3 +15,5 @@ and default have package level access control.
 A protected member is accessible by classes in the same package and its
 subclasses. A default member (without any access specifier) is accessible
 by classes in the same package only.
+
+* Packages can be considered as data encapsulation (or data-hiding).
