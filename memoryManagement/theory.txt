@@ -1,0 +1,6 @@
+Intorduction:
+In every programming language, the memory
+is a vital(жизненно важный) resource and is
+also scarce(недостаточный, дефицитный) in nature.
+Hence(следовательно) it's essential(важно) that the memory is
+managed thoroughly(тщательно) without any leaks(утечек).

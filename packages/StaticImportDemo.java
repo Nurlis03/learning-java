@@ -1,6 +1,6 @@
 package packages;
 
-// Note statci keyword after import.
+// Note static keyword after import.
 import static java.lang.System.*;
 
 /*
