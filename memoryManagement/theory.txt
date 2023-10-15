@@ -4,3 +4,16 @@ is a vital(жизненно важный) resource and is
 also scarce(недостаточный, дефицитный) in nature.
 Hence(следовательно) it's essential(важно) that the memory is
 managed thoroughly(тщательно) without any leaks(утечек).
+
+Allocation and deallocation of memory is a critical
+task and requires a lot of care(забот) and cosideration(рассмотрение).
+
+However in Java, unlike(в отличие от) other programming language,
+the JVM and to be specific(и еслии быть, точным) Garbage Collector has the role
+of managing memory allocation so that the programmer
+needs not to.
+
+Whereas in other programming languages such as C
+the programmer has direct access(прямой доступ) to the memory who
+allocates memory in his code, thereby creating a lot 
+of scope for leaks(тем самым создается большой простор для утечек).
