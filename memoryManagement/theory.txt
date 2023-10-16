@@ -17,3 +17,153 @@ Whereas in other programming languages such as C
 the programmer has direct access(прямой доступ) to the memory who
 allocates memory in his code, thereby creating a lot 
 of scope for leaks(тем самым создается большой простор для утечек).
+
+------------------------------------------------------------------------------
+
+The major concepts in Java Memory Management:
+* JVM Memory Structure
+* Working of Garbage Collector
+
+Java Memory Structure:
+JVM defines various run time data area which are used during
+execution of a program. Some of the areas are created by the
+JVM whereas some are created by the threads that are used in a
+program. However, the memory area created by JVM is destroyed
+only when the JVM exits. The data areas of thread are created
+during instantiation and destroyed when the thread exits.
+
+a Arrays
+Java Strings
+Java OOPs
+Java Collection
+Java 8 Tutorial
+Java Multithreading
+Java Exception Handling
+Java Programs
+Java Project
+Java Collections Interview
+Java Interview Questions
+Java MCQs
+Spring
+Spring MVC
+Spring Boot
+Hibernate
+
+
+Related Articles
+Write an Interview Experience
+Java Tutorial
+Overview of Java
+Basics of Java
+Input/Output in Java
+Flow Control in Java
+Operators in Java
+Strings in Java
+Arrays in Java
+OOPS in Java
+Inheritance in Java
+Abstraction in Java
+Encapsulation in Java
+Polymorphism in Java
+Constructors in Java
+Methods in Java
+Interfaces in Java
+Wrapper Classes in Java
+Keywords in Java
+Access Modifiers in Java
+Memory Allocation in Java
+Java Memory Management
+How are Java objects stored in memory?
+Stack vs Heap Memory Allocation
+How many types of memory areas are allocated by JVM?
+Garbage Collection in Java
+Types of JVM Garbage Collectors in Java with implementation details
+Memory leaks in Java
+Java Virtual Machine (JVM) Stack Area
+Classes of Java
+Packages in Java
+Java Collection Tutorial
+Exception Handling in Java
+Multithreading in Java
+Synchronization in Java
+File Handling in Java
+Java Regex
+Java IO
+Java Networking
+Java Memory Management
+Read
+Discuss
+Practice
+This article will focus on Java memory management, how the heap works, reference types, garbage collection, and also related concepts.
+
+Why Learn Java Memory Management?
+We all know that Java itself manages the memory and needs no explicit intervention of the programmer. Garbage collector itself ensures that the unused space gets cleaned and memory can be freed when not needed. So what’s the role of programmer and why a programmer needs to learn about the Java Memory Management ? Being a programmer, you don’t need to bother with problems like destroying objects, all credits to the garbage collector. However the automatic garbage collection doesn’t guarantee everything. If we don’t know how the memory management works, often we will end up amidst things that are not managed by JVM (Java Virtual Machine). There are some objects that aren’t eligible for the automatic garbage collection.
+
+Hence knowing the memory management is essential as it will benefit the programmer to write high performance based programs that will not crash, or if does so, the programmer will know how to debug or overcome the crashes.
+
+Introduction:
+In every programming language, the memory is a vital resource and is also scarce in nature. Hence it’s essential that the memory is managed thoroughly without any leaks. Allocation and deallocation of memory is a critical task and requires a lot of care and consideration. However in Java, unlike other programming language, the JVM and to be specific Garbage Collector has the role of managing memory allocation so that the programmer needs not to. Whereas in other programming languages such as C the programmer has direct access to the memory who allocates memory in his code, thereby creating a lot of scope for leaks.
+
+
+The major concepts in Java Memory Management :
+
+JVM Memory Structure
+Working of Garbage Collector
+Java Memory Structure:
+JVM defines various run time data area which are used during execution of a program. Some of the areas are created by the JVM whereas some are created by the threads that are used in a program. However, the memory area created by JVM is destroyed only when the JVM exits. The data areas of thread are created during instantiation and destroyed when the thread exits.
+
+JVM Memory area parts
+JVM Memory area parts
+
+Let’s study these parts of memory area in detail:
+
+Heap :
+*   It is a shared runtime data area(разделимая область данных) and stores the 
+    actual object in a memory. It is instantiated(создается) during the 
+    virtual machine startup.
+
+*   This memory is allocated for all class instances 
+    and array. Heap can be of fixed or dynamic size 
+    depending upon the system’s configuration.
+
+*   JVM provides(обеспечивает) the user control to initialize or vary the 
+    size of heap as per the requirement. When a new keyword(ключевое слово) is
+    used, object is assigned a space in heap, but the 
+    reference of the same exists onto the stack.
+
+*   There exists one and only one heap for a running 
+    JVM process.
+
+
+Scanner sc = new Scanner(System.in);
+
+The above statement creates the object of Scanner class which 
+gets allocated to heap whereas the reference ‘sc’ gets pushed to the stack.
+
+Note: Garbage collection in heap area is 
+mandatory(Сбор мусора в области кучи является обязательным.).
+
+
+Method Area:
+*   It is a logical part of the heap area and is created
+    on virtual machine startup.
+
+*   This memory is allocated(выделяет) for class structures, 
+    method data and constructor field data, and also 
+    for interfaces or special method used in class. 
+    Heap can be of fixed or dynamic size depending 
+    upon the system’s configuration.
+
+*   Can be of a fixed size or expanded(расширенным) as required by 
+    the computation. 
+    Needs not to be contiguous(Не обязательно должны быть смежными.).
+
+
+Note: Though method area is logically a part of heap, 
+it may or may not be garbage collected even 
+if garbage collection is compulsory in heap area.
+
+(Примечание: Хотя область метода логически является 
+частью кучи, она может быть собрана мусором, а 
+может и не быть, даже если сборка мусора 
+обязательна в области кучи.)
