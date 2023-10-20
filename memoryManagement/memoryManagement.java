@@ -1,6 +1,6 @@
 public class memoryManagement {
     public static void main(String[] args) {
-        String localPrefix = "297"; //1
+        String localPrefix = new Integer(297).toString().intern(); //1
         String prefix = "297";      //2
 
         if (prefix == localPrefix)
