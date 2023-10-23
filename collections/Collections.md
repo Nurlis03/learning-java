@@ -29,4 +29,35 @@ Let us see the hierarchy of Collection framework. The **java.util** package cont
 
 ![Alt](java-collection-hierarchy.png)
 
+## Iterable Interface
+
+The Iterable interface is the root interface for all the collection classes. The Collection interface extends the Iterable interface and therefore(следовательно) all the subclasses of Collection interface also implement the Iterable interface.
+
+It contains only one abstract method. i.e.,
+```Java
+Iterator<T> iterator()  
+```
+
+It returns the iterator over the elements of type T.
+
+## Collection Interface
+
+The Collection interface is the interface which is implemented by all the classes in the collection framework. It declares the methods that every collection will have. In other words, we can say that the Collection interface builds the foundation(основу) on which the collection framework depends.
+
+Some of the methods of Collection interface are Boolean add ( Object obj), Boolean addAll ( Collection c), void clear(), etc. which are implemented by all the subclasses of Collection interface.
+
+## List Inteface
+
+List interface is the child interface of Collection interface. It inhibits(подавляет) a list type data structure in which we can store the ordered collection of objects. It can have duplicate values.
+
+List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stack.
+
+To instantiate the List interface, we must use :
+
+```Java
+List <data-type> list1= new ArrayList();  
+List <data-type> list2 = new LinkedList();  
+List <data-type> list3 = new Vector();  
+List <data-type> list4 = new Stack();  
+```
 
