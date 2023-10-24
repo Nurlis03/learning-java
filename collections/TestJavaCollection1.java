@@ -1,6 +1,7 @@
 package collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
 class TestJavaCollection1 {
@@ -10,7 +11,6 @@ class TestJavaCollection1 {
         list.add("Vijay");
         list.add("Ravi");
         list.add("Ajay");
-
         Iterator itr = list.iterator();
         while(itr.hasNext()) {
             System.out.println(itr.next());
