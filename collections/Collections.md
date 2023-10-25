@@ -76,3 +76,34 @@ Vector uses a dynamic array to store the data elements. It is similar to ArrayLi
 ## Stack
 
 The stack is the subclass of Vector. It implements the last-in-first-out data structure, i.e., Stack. The stack contains all of the methods of Vector class and also provides its methods like boolean push(), boolean peek(), boolean push(object o), which defines its properties.
+
+## Queue Interface
+
+Queue interface maintains the first-in-first-out order. It can be defined as an ordered list that is used to hold the elements which are about to be processed. There are various classes like PriorityQueue, Deque, and ArrayDeque which implements the Queue interface.
+
+Queue interfacd can be instantiated as:
+
+```Java
+Queue<String> q1 = new PriorityQueue();
+
+Queue<String> q2 = new PriorityQueue();
+```
+
+## PriorityQueue
+
+The PriorityQueue class implements the Queue interface. It holds the elements or objects which are to be processed by their priorities. PriorityQueue doesn't allow null values to be stored in the queue.
+
+## Deque Interface
+
+Deque interface extends the Queue interface. In Deque, we can remove and add the elements from both the side. Deque stands for a double-ended queue which enables us to perform the operations at both the ends.
+
+```Java
+Deque d = new ArrayDeque();
+```
+
+## ArrayDeque
+
+ArrayDeque class implements the Deque interface. It facilitates(способствует) us to use the Deque. Unlike(в отличие) queue, we can add or delete the elements from both the ends.
+
+ArrayDeque is faster than ArrayList and Stack and has no capacity restrictions(не имеет ограничений по емкости).
+
