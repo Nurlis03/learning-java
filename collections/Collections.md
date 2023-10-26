@@ -107,3 +107,39 @@ ArrayDeque class implements the Deque interface. It facilitates(способст
 
 ArrayDeque is faster than ArrayList and Stack and has no capacity restrictions(не имеет ограничений по емкости).
 
+## Set Interface
+
+Set Interface in Java is present in java.util package. It extends the Collection interface. It represents the unordered set of elements which doesn't allow us to store the duplicate items. We can store at most one null value in Set. Set is implemented by HashSet, LinkedHashSet, and TreeSet.
+
+Set can be instantiated as:
+
+```Java
+Set<data-type> s1 = new HashSet<data-type>();
+
+Set<data-typ> s2 = new LinkedHashSet<data-type>();
+
+Set<data-type> s3 = new TreeSet<data-type>();
+```
+
+## HashSet
+
+HashSet class implements Set Interface. It represents the collection that uses a hash table for storage. Hashing is used to store the elements in the HashSet. It contains unique items.
+
+## LinkedHashSet
+
+LinkedHashSet class represents the LinkedList implementation of Set Interface. It extends the HashSet class and implements Set interface. Like HashSet, It also contains unique elements. It maintains(поддерживает) the insertion order and permits(разрешает) null elements.
+
+## SortedSet Interface
+
+SortedSet is the alternate of Set interface that provides a total ordering on its elements. The elements of the SortedSet are arranged in the increasing (ascending) order. The SortedSet provides the additional methods that inhibit(препятствуют) the natural ordering of the elements.
+
+The SortedSet can be instantiated as:
+
+```
+SortedSet<data-type> set = new TreeSet();
+```
+
+## TreeSet
+
+Java TreeSet class implements the Set interface that uses a tree for storage. Like HashSet, TreeSet also contains unique elements. However, the access and retrieval(извлечение) time of TreeSet is quite fast. The elements in TreeSet stored in ascending order.
+
