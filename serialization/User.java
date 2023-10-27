@@ -1,0 +1,11 @@
+package serialization;
+
+public class User {
+    
+    String name;
+    String password;
+
+    public void sayHello() {
+        System.out.println("Hello " + name);
+    }
+}
