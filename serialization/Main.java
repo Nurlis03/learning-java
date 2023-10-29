@@ -28,8 +28,8 @@ public class Main {
         //                 6. out.close(); fileOut.close();
         User user = new User();
 
-        user.name = "Bro";
-        user.password = "I<3Pizza";
+        user.name = "Bro Code";
+        user.password = "password123";
 
         Path currRelativePath = Paths.get("");
         FileOutputStream fileOut = new FileOutputStream(currRelativePath.toAbsolutePath().toString() + "\\serialization\\UserInfo.ser");
