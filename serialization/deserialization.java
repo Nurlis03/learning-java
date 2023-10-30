@@ -14,6 +14,7 @@ public class deserialization {
     //                  7. in.close(); fileIn.close();
     //                  -----------------------------------------------
 
+    //serialVersionUID
     public static void main(String args[]) throws IOException, ClassNotFoundException {
         User user = null;
         FileInputStream fileIn = new FileInputStream("D:\\java_projects\\learn-java-repository\\serialization\\UserInfo.ser");

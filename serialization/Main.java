@@ -26,6 +26,12 @@ public class Main {
         //                 4. ObjectOutputStream out = new ObjectOutputStream(fileOut);
         //                 5. out.writeObject(objectName)
         //                 6. out.close(); fileOut.close();
+
+        // important notes  1. children classes of a parent class that implements Serializable will do so as well(таже будут делать это)
+        //                  2. static fields are not serialized (they belong(принадлежат) to the class, not an individual object) 
+        //                  3. the class's definition ("class file") itself is not recorded(записывается), cast it as the object type(приведите его в качестве объекта)
+        //                  4. Fields declared as "transient(временные)" aren't serialized, they're ignored
+        //                  5. serialVersionUID is a unique version ID for a class that is serializable(уникальна идентификатор версии)
         User user = new User();
 
         user.name = "Bro Code";
