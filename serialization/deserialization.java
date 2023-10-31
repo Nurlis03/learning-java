@@ -14,7 +14,13 @@ public class deserialization {
     //                  7. in.close(); fileIn.close();
     //                  -----------------------------------------------
 
-    //serialVersionUID
+    //serialVersionUID = serialVersionUID is a unique ID that functions like a version #
+    //                   verifies that the sender and receiver of a serialized object,
+    //                   have loaded classes for that object that match
+    //                   Ensures object will be compatible between machines
+    //                   Number must match. otherwise this will cause a InvalidClassException
+    //                   A SerialVersionUID will be calculated based on class properties, members, etc.
+    //                   A serializable class can declare its own serialVersionUID explicitly
     public static void main(String args[]) throws IOException, ClassNotFoundException {
         User user = null;
         FileInputStream fileIn = new FileInputStream("D:\\java_projects\\learn-java-repository\\serialization\\UserInfo.ser");
@@ -26,5 +32,8 @@ public class deserialization {
         System.out.println(user.name);
         System.out.println(user.password);
         user.sayHello();
+
+        long serialVersionUID = ObjectStreamClass.lookup(user.getClass()).getSerialVersionUID();
+        System.out.println(serialVersionUID);
     }
 }
