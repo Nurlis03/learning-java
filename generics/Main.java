@@ -16,7 +16,7 @@ public class Main {
         // displayArray(intArray);
         // displayArray(doubleArray);
         // displayArray(charArray);
-        // displayArray(stringArray);
+        // displayArray(stringArray);   
 
         System.out.println(getFirst(intArray));
         System.out.println(getFirst(doubleArray));
