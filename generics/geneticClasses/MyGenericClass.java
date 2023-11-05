@@ -1,6 +1,6 @@
 package generics.geneticClasses;
 
-public class MyGenericClass <Thing, Thing2> {
+public class MyGenericClass <Thing extends Number, Thing2 extends Number> {
     Thing x;
     Thing2 y;
 

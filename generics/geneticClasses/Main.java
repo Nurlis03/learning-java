@@ -1,18 +1,18 @@
 package generics.geneticClasses;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String args[]) {
+
+        // bounded types = you can create the objects of a generic class to have data
+        //                 of specific derived types ex.Number
+
         MyGenericClass<Integer, Integer> myInt = new MyGenericClass<>(1, 9);
         MyGenericClass<Double, Double> myDouble = new MyGenericClass<>(3.14, 1.01);
-        MyGenericClass<Character, Character> myCharacter = new MyGenericClass<>('@', '$');
-        MyGenericClass<String, Character> myString = new MyGenericClass<>("Hello", '!');
 
-        ArrayList<String> myFriends = new ArrayList<>();
+        // ArrayList<String> myFriends = new ArrayList<>();
+        // HashMap<Integer, String> users = new HashMap<>();
+
         System.out.println(myInt.getValue());
         System.out.println(myDouble.getValue());
-        System.out.println(myCharacter.getValue());
-        System.out.println(myString.getValue());
     }
 }
