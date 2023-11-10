@@ -16,3 +16,28 @@ Two types of garbage collection activity(операций) usually happen in Jav
 
 1. Minor(инкрементальная) or incremental Garbage Collection: It is said to have occurred(что это произошло) when unreachable objects in the young generation heap memory are removed.
 2. Major or Full Garbage Collection: It is said to have occurred when the objects that survived(пережившие) the minor garbage collection are copied into the old generation or permanent generation heap memory are removed. When compared to the young generation, garbage collection happens less frequently in the old generation.
+
+
+## Important Concepts Related to Garbage Collection in Java
+
+1. `Unreachable(недостижимые) objects:` An object is said to be unreachable if it doesn’t contain any reference to it. Also, note that objects which are part of the island of isolation are also unreachable. 
+
+```Java
+Integer i = new Integer(4);
+// the new Integer object is reachable  via the reference in 'i' 
+i = null;
+// the Integer object is no longer reachable.
+```
+
+![Alt text](image-1.png)
+
+2. `Eligibility for garbage collection:`(Право на сборку мусора) An object is said to be eligible for GC(garbage collection) if it is unreachable. After i = null, integer object 4 in the heap area is suitable(подходит) for garbage collection in the above image.
+
+## Ways to make an object eligible for Garbage Collector
+
+* Even though the programmer is not responsible for destroying useless objects but it is highly recommended to make an object unreachable(thus eligible for GC) if it is no longer required.
+* There are generally four ways to make an object eligible for garbage collection.
+1. Nullifying the reference variable
+2. Re-assigning the reference variable
+3. An object created inside the method
+4. Island of Isolation
