@@ -41,3 +41,36 @@ i = null;
 2. Re-assigning the reference variable
 3. An object created inside the method
 4. Island of Isolation
+
+## Ways for requesting JVM to run Garbage Collector
+
+* Once we make an object eligible(пригодный) for garbage collection, it may not destroy immediately by the garbage collector. Whenever JVM runs the Garbage Collector program, then only the object will be destroyed. But when JVM runs Garbage Collector, we can not expect(мы не можем этого ожидать).
+
+* We can also request JVM to run Garbage Collector. There are two ways to do it : 
+    1. Using System.gc() method: System class contain static method gc() for requesting JVM to run Garbage Collector.
+    2. Using Runtime.getRuntime().gc() method: Runtime class allows the application to interface with the JVM in which the application is running. Hence by using its gc() method, we can request JVM to run Garbage Collector.
+    3. There is no guarantee that any of the above two methods will run Garbage Collector.
+    4. The call System.gc() is effectively equivalent to the call : Runtime.getRuntime().gc()
+
+`Finalization`
+* Just before destroying an object, Garbage Collector calls finalize() method on the object to perform cleanup activities. Once finalize() method completes, Garbage Collector destroys that object.
+* finalize() method is present in Object class with the following prototype.
+
+```Java
+protected void finalize() throws Throwable
+```
+
+protected void finalize() throws Throwable
+Based on our requirement, we can override finalize() method for performing our cleanup activities like closing connection from the database. 
+
+1. The finalize() method is called by Garbage Collector, not JVM. However, Garbage Collector is one of the modules of JVM.
+2. Object class finalize() method has an empty implementation. Thus, it is recommended to override the finalize() method to dispose of system resources or perform other cleanups.
+3. The finalize() method is never invoked more than once for any object.
+4. If an uncaught exception is thrown by the finalize() method, the exception is ignored, and the finalization of that object terminates.
+
+## Advantages of Garbage Collection in Java
+
+The advantages of Garbage Collection in Java are:
+
+* It makes java memory-efficient because the garbage collector removes the unreferenced objects from heap memory.
+* It is automatically done by the garbage collector(a part of JVM), so we don’t need extra effort.
