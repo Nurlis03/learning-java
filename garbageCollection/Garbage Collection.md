@@ -74,3 +74,34 @@ The advantages of Garbage Collection in Java are:
 
 * It makes java memory-efficient because the garbage collector removes the unreferenced objects from heap memory.
 * It is automatically done by the garbage collector(a part of JVM), so we don’t need extra effort.
+
+## Real-World-Example
+
+Let’s take a real-life example, where we use the concept of the garbage collector.
+
+`Question`: Suppose you go for the internship at GeeksForGeeks, and you were told to write a program to count the number of employees working in the company(excluding interns). To make this program, you have to use the concept of a garbage collector. 
+
+#### This is the actual task you were given at the company:
+
+Write a program to create a class called Employee having the following data members.
+
+1. An ID for storing unique id allocated to every employee. 
+2. Name of employee. 
+3. age of an employee.
+
+Also, provide the following methods:
+
+1. A parameterized constructor to initialize name and age. The ID should be initialized in this constructor.
+2. A method show() to display ID, name, and age.
+3. A method showNextId() to display the ID of the next employee.
+
+Now any beginner, who doesn’t know Garbage Collector in Java will code like this:(see code on UseEmployee.java)
+
+## Now to get the correct output: 
+Now garbage collector(gc) will see 2 objects free. Now to decrement nextId,gc(garbage collector) will call method to finalize() only when we programmers have overridden it in our class. And as mentioned previously, we have to request gc(garbage collector), and for this, we have to write the following 3 steps before closing brace of sub-block.  
+
+1. Set references to null(i.e X = Y = null;)
+2. Call, System.gc();
+3. Call, System.runFinalization();
+
+Now the correct code for counting the number of employees(excluding interns)(see code on UseEmployeeCorrect.java)
