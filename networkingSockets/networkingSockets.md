@@ -25,3 +25,13 @@ When the connection is made, the server creates a socket object on its end of th
 The java.net.Socket class represents a socket, and the java.net.ServerSocket class provides a mechanism for the server program to listen for clients and establish connections with them.
 
 The following steps occur when establishing a TCP connection between two computers using sockets −
+
+* The server instantiates a ServerSocket object, denoting which port number communication is to occur on.
+
+* The server invokes the accept() method of the ServerSocket class. This method waits until a client connects to the server on the given port.
+
+* After the server is waiting, a client instantiates a Socket object, specifying the server name and the port number to connect to.
+
+* The constructor of the Socket class attempts to connect the client to the specified server and the port number. If communication is established, the client now has a Socket object capable of communicating with the server.
+
+* On the server side, the accept() method returns a reference to a new socket on the server that is connected to the client's socket.
